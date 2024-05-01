@@ -1,0 +1,23 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.function.Function;
+
+
+public class StreamClass
+{
+  public static void main(String args[])
+   {
+       List<String> listOfstring=Arrays.asList("Shilpa","Sai","Komma","Shilpa");
+       Map<String,Long> stringCount=listOfstring.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+/*Step 1: listOfString.stream() converts the list into a Stream of strings.
+Step 2: .collect(...) collects the strings into a map.
+Step 2a: Collectors.groupingBy(Function.identity(), Collectors.counting()) groups the strings by their identity (i.e., each string is grouped by itself), and then counts the occurrences of each string.
+Function.identity() serves as the classifier for grouping, meaning each string is grouped by itself.
+Collectors.counting() counts the occurrences of each string.
+*/
+       System.out.print(stringCount);
+   }
+}
