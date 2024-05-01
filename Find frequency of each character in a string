@@ -1,0 +1,24 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class StreamClass
+{
+  public static void main(String args[])
+{
+  String str="Java Concept";
+  Map<Character,Long> countChar= str.chars().mapToObj(c-> (char) c).
+     collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+/*
+Step 1: str.chars() converts the string into an IntStream of characters. Each integer value in the stream represents the Unicode value of a character in the string.
+Step 2: .mapToObj(c -> (char) c) converts each integer value in the stream back to a character.
+Step 3: .collect(...) collects the characters into a map.
+Step 3a: Collectors.groupingBy(Function.identity(), Collectors.counting()) groups the characters by their identity (i.e., each character is grouped by itself), and then counts the occurrences of each character.
+Function.identity() serves as the classifier for grouping, meaning each character is grouped by itself.
+Collectors.counting() counts the occurrences of each character.
+System.out.print(countChar);
+*/
+
+}
+}
