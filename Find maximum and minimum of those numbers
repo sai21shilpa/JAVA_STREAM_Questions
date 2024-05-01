@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Comparator;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        List<Integer> listOfInteger=Arrays.asList(12,9,8,4,5,21,67);
+        int max=listOfInteger.stream().max(Comparator.naturalOrder()).get();
+//fetching the max value
+        System.out.println(max);
+        int min=listOfInteger.stream().min(Comparator.naturalOrder()).get();
+//fetching the min value
+        System.out.println(min);
+    }
+}
