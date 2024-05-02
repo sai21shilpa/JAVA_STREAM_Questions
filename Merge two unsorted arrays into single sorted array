@@ -1,0 +1,11 @@
+import java.util.stream.IntStream;
+import java.util.Arrays;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] a=new int[]{1,4,2,6};
+        int[] b=new int[]{3,8,7,1};
+        int[] c=IntStream.concat(Arrays.stream(a),Arrays.stream(b)).sorted().toArray();
+        System.out.print(Arrays.toString(c));
+    }
+}
