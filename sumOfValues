@@ -1,0 +1,10 @@
+import java.util.stream.Stream;
+import java.util.stream.Collectors;
+
+class HelloWorld {
+    public static void main(String[] args) {
+       int i=1542316;
+       int sum=Stream.of(String.valueOf(i).split("")).collect(Collectors.summingInt(Integer::parseInt));
+       System.out.print(sum);
+    }
+}
