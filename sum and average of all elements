@@ -1,0 +1,11 @@
+import java.util.Arrays;
+
+class HelloWorld {
+    public static void main(String[] args) {
+     int[] a=new int[]{1,4,2,53,23,57};
+     int sum=Arrays.stream(a).sum();
+     System.out.println("Sum :"+sum);
+     double avrg=Arrays.stream(a).average().getAsDouble();
+     System.out.println("Average :"+avrg);
+    }
+}
