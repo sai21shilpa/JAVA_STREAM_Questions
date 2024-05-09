@@ -1,0 +1,10 @@
+import java.util.Arrays;
+import java.util.List;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        List<Integer> l1=Arrays.asList(1,53,24,643,390);
+        List<Integer> l2=Arrays.asList(91,54,24,30,390);
+        l1.stream().filter(l2::contains).forEach(System.out::println);
+    }
+}
