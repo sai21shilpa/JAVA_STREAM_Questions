@@ -1,0 +1,2 @@
+Map<String, List<Student>> mapData = list.stream().collect(Collectors.groupingBy(Student::getDepartmantName));
+System.out.println("Students grouped by the department names : "+mapData);
