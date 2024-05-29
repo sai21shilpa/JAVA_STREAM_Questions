@@ -1,0 +1,2 @@
+List<Student> lstStudent = list.stream().filter(dt -> dt.getAge() < 30).collect(Collectors.toList());
+System.out.println("List of students whose age is less than 30 : "+lstStudent);
