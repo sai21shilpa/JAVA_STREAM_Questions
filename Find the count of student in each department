@@ -1,0 +1,3 @@
+Map<String, Long> countStudentInEachdept = list.stream()
+    .collect(Collectors.groupingBy(Student::getDepartmantName, Collectors.counting()));
+System.out.println("Student count in each department : "+count
