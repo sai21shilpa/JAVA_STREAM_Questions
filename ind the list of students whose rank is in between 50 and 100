@@ -1,0 +1,3 @@
+List<Student> lstStu = list.stream().filter(dt -> dt.getRank() > 50 && dt.getRank() < 100)
+    .collect(Collectors.toList());
+System.out.println("List of students whose rank is between 50 and 100 : "+lstStu);
