@@ -1,0 +1,3 @@
+List<Student> lstDelhistudent = list.stream().filter(dt -> dt.getCity().equals("Delhi"))
+    .sorted(Comparator.comparing(Student::getFirstName)).collect(Collectors.toList());
+System.out.println("List of students who stays in Delhi and sort them by their names : "+lstDelhistudent);
