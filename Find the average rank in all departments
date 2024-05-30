@@ -1,0 +1,3 @@
+Map<String, Double> collect = list.stream()
+    .collect(Collectors.groupingBy(Student::getDepartmantName, Collectors.averagingInt(Student::getRank)));
+System.out.println("Average rank in all departments  : "+collect);
