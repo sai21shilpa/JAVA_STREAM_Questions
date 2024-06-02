@@ -1,0 +1,2 @@
+Student student = list.stream().sorted(Comparator.comparing(Student::getRank)).skip(1).findFirst().get();
+System.out.println("Second highest rank student  : "+student);
