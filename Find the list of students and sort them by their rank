@@ -1,0 +1,3 @@
+List<Student> stuRankSorted = list.stream().sorted(Comparator.comparing(Student::getRank))
+    .collect(Collectors.toList());
+System.out.println("List of students sorted by their rank  : "+stuRankSorted);
