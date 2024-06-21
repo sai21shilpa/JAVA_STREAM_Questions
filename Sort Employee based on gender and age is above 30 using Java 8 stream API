@@ -1,0 +1,6 @@
+List<Employee> employees = ...; // Your list of employees
+
+List<Employee> sortedEmployees = employees.stream()
+    .filter(e -> e.getAge() > 30)
+    .sorted(Comparator.comparing(Employee::getGender))
+    .collect(Collectors.toList());
