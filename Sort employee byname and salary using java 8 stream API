@@ -1,0 +1,15 @@
+public class Employee {
+    String firstName;
+    int age;
+}
+
+        List<Employee> employees = new ArrayList<>();
+        Employee e1 = new Employee("Ajay",35);
+        Employee e2 = new Employee("Vijay",5);
+        Employee e3 = new Employee("Zack",30);
+        Employee e4 = new Employee("David",51);
+
+
+List<Employee> sortedEmployees = employees.stream()
+    .sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary))
+    .collect(Collectors.toList());
