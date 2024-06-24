@@ -1,0 +1,5 @@
+List<Employee> employees = ...; // Your list of employees
+
+List<Employee> employeesStartingWithA = employees.stream()
+    .filter(e -> e.getName().startsWith("A"))
+    .collect(Collectors.toList());
