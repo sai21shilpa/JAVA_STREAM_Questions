@@ -1,0 +1,2 @@
+Stream<String> streamOfString =
+  Pattern.compile(", ").splitAsStream("a, b, c");
