@@ -1,0 +1,4 @@
+Path path = Paths.get("C:\\file.txt");
+Stream<String> streamOfStrings = Files.lines(path);
+Stream<String> streamWithCharset = 
+  Files.lines(path, Charset.forName("UTF-8"));
