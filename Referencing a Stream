@@ -1,0 +1,3 @@
+Stream<String> stream = 
+  Stream.of("a", "b", "c").filter(element -> element.contains("b"));
+Optional<String> anyElement = stream.findAny();
