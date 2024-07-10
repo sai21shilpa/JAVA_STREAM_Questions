@@ -1,0 +1,11 @@
+List<WebElement>links = driver.find elements(By.tagName("a"));
+System.out.println(links.size());
+//Printing linkTexts using for..each loop(without Java8)
+for (WebElement link : links) {
+System.out.println(link.getText());
+}
+//Printing linkTexts using lambda expression(with Java8 functions)
+links.forEach(link -> System.out.println(link.getText()));
+//Processing elements using stream -> filter
+long workingLinks=links.stream().filter(link->link.getAttribute("href")!=null).count();
+System.out.println("Working link:"+workingLinks);
