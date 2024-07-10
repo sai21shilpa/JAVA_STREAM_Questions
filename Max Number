@@ -1,0 +1,7 @@
+//Getting max number
+Integer maximum = Stream.of(10,13,4,9,2,100).max(Comparator.comparing(Integer::valueOf)).get();
+//Getting min number
+//getting max number
+Integer minimum = Stream.of(10,13,4,9,2,100).min(Comparator.comparing(Integer::valueOf)).get();
+System.out.println(“Max number is: ”+maximum);
+System.out.println(“Min number is: ”+minimum);
