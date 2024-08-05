@@ -1,0 +1,6 @@
+@Test
+public void whenCollectStreamToList_thenGetList() {
+    List<Employee> employees = empList.stream().collect(Collectors.toList());
+    
+    assertEquals(empList, employees);
+}
