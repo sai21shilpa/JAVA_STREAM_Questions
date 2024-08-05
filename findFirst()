@@ -1,0 +1,13 @@
+@Test
+public void whenFindFirst_thenGetFirstEmployeeInStream() {
+    Integer[] empIds = { 1, 2, 3, 4 };
+    
+    Employee employee = Stream.of(empIds)
+      .map(employeeRepository::findById)
+      .filter(e -> e != null)
+      .filter(e -> e.getSalary() > 100000)
+      .findFirst()
+      .orElse(null);
+    
+    assertEquals(employee.getSalary(), new Double(200000));
+}
