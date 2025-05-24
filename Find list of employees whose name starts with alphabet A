@@ -1,0 +1,3 @@
+List<Employee> aEmp = empList.stream()
+  	.filter(emp -> emp.getName().startsWith("A"))
+  				.collect(Collectors.toList());
