@@ -1,0 +1,3 @@
+   Map.Entry<String, Long> deptMaxCount = empList.stream().collect(Collectors.groupingBy(
+ 			Employee::getDepartmentName, Collectors.counting()))
+ 			.entrySet().stream().max(Map.Entry.comparingByValue()).get();
