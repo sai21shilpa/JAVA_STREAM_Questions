@@ -1,0 +1,1 @@
+   List<Employee> employees = empList.stream().filter(emp -> emp.getAddress().equals("Delhi")).sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
