@@ -1,0 +1,2 @@
+   List<String> deptNamesList = empList.stream()
+ .map(emp -> emp.getDepartmentName()).collect(Collectors.toList());
