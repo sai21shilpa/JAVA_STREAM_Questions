@@ -1,0 +1,1 @@
+   Map<String, Long> deptCountMap = empList.stream().collect(Collectors.groupingBy(Employee::getDepartmentName, Collectors.counting()));
