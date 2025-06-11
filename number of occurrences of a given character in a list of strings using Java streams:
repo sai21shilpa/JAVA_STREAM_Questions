@@ -1,0 +1,8 @@
+List<String> strings = Arrays.asList("apple", "banana", "orange", 
+                                    "grape", "melon");
+char target = 'a';
+long occurrences = strings.stream()
+                         .flatMapToInt(CharSequence::chars)
+                         .filter(c -> c == target)
+                         .count();
+System.out.println("Occurrences of '" + target + "': " + occurrences);
