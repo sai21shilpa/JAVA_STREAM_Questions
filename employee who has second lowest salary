@@ -1,0 +1,1 @@
+   Employee emp = empList.stream().sorted(Comparator.comparing(Employee::getSalary)).skip(1).findFirst().get();
