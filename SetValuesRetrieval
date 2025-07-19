@@ -1,0 +1,11 @@
+public class SetValuesRetrieval {
+
+       public static void main(String[] args) {
+
+       //Creating a Set
+          Set<String> set = Set.of("California","Chicago","New York");
+
+       //Retrieving values of the Set
+          set.stream().forEach(System.out::println);
+       } 
+}
