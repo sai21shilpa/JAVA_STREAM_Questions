@@ -1,0 +1,2 @@
+Set<String> set = Stream.of("California", "Chicago", "New York")
+    .collect(Collectors.toCollection(HashSet::new));
