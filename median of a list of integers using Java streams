@@ -1,0 +1,7 @@
+List<Integer> numbers = Arrays.asList(5, 2, 1, 3, 4);
+OptionalDouble median = numbers.stream()
+                               .sorted()
+                               .mapToInt(Integer::intValue)
+                               .collect(IntStatistics.summaryStatistics())
+                               .getMedian();
+System.out.println("Median: " + median.getAsDouble());
