@@ -1,0 +1,5 @@
+List<String> words = Arrays.asList("apple", "banana", "avocado", "blueberry", "cherry");
+Map<Character, List<String>> groupedByFirstChar = words.stream()
+    .collect(Collectors.groupingBy(word -> word.charAt(0)));
+System.out.println(groupedByFirstChar);
+// Output: {a=[apple, avocado], b=[banana, blueberry], c=[cherry]}
