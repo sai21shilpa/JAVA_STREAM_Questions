@@ -1,0 +1,5 @@
+List<String> names = Arrays.asList("java", "stream", "api");
+List<String> uppercaseNames = names.stream()
+    .map(String::toUpperCase)
+    .collect(Collectors.toList());
+System.out.println(uppercaseNames); // Output: [JAVA, STREAM, API]
