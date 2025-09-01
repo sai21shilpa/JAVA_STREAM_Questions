@@ -1,0 +1,10 @@
+@Test
+public void whenMapIdToEmployees_thenGetEmployeeStream() {
+    Integer[] empIds = { 1, 2, 3 };
+    
+    List<Employee> employees = Stream.of(empIds)
+      .map(employeeRepository::findById)
+      .collect(Collectors.toList());
+    
+    assertEquals(employees.size(), empIds.length);
+}
