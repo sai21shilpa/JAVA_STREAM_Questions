@@ -1,0 +1,7 @@
+Stream.Builder<Employee> empStreamBuilder = Stream.builder();
+
+empStreamBuilder.accept(arrayOfEmps[0]);
+empStreamBuilder.accept(arrayOfEmps[1]);
+empStreamBuilder.accept(arrayOfEmps[2]);
+
+Stream<Employee> empStream = empStreamBuilder.build();
