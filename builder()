@@ -1,0 +1,2 @@
+Stream<String> streamBuilder =
+  Stream.<String>builder().add("a").add("b").add("c").build();
