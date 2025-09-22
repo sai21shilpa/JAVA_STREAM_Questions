@@ -1,0 +1,2 @@
+Stream<String> streamGenerated =
+  Stream.generate(() -> "element").limit(10);
