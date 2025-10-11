@@ -1,0 +1,12 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      List<String> listOfString=List.of("apple","banana","cherry","apricot");
+      List<String> res = listOfString.stream()
+      .filter(s->s.toLowerCase().startsWith("a"))
+      .map(String::toUpperCase)
+      .sorted()
+      .toList(); 
+      System.out.println(res);
+    }
+}
