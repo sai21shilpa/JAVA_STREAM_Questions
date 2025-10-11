@@ -1,0 +1,21 @@
+
+import java.util.*;
+
+class Main {
+     static boolean endsWithVowel(String s) {
+        if (s == null || s.isEmpty()) return false;
+        char c = Character.toLowerCase(s.charAt(s.length() - 1));
+        return c=='a' || c=='e' || c=='i' || c=='o' || c=='u';
+    }
+
+    
+    public static void main(String[] args) {
+      List<String> listOfString=List.of("Kite","desk","OREO","cup","Ai");
+      List<String> res = listOfString.stream()
+      .filter(Main::endsWithVowel)
+      .map(String::toLowerCase)
+      .sorted()
+      .toList(); 
+      System.out.println(res);
+    }
+}
