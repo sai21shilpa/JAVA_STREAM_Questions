@@ -1,0 +1,5 @@
+String sentence = "Java Stream API is very powerful";
+String longestWord = Arrays.stream(sentence.split(" "))
+    .max(Comparator.comparingInt(String::length))
+    .orElse(null);
+System.out.println(longestWord); // Output: powerful
