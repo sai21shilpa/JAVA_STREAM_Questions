@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class StreamMax {
+   public static Optional<Integer> findMax(List<Integer> numbers) {
+      return numbers.stream()
+                    .max(Integer::compare);
+   }
+
+   public static void main(String[] args) {
+      List<Integer> numbers = Arrays.asList(12, 42, 36, 54, 35);
+      System.out.println(findMax(numbers).orElse(-1));
+   }
+}
