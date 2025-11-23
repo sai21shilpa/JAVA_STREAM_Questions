@@ -1,0 +1,9 @@
+List<String> words = Arrays.asList("listen", "silent", "enlist", "google", "elbow", "below");
+Map<String, List<String>> anagrams = words.stream()
+    .collect(Collectors.groupingBy(
+        word -> word.chars().sorted()
+            .mapToObj(c -> String.valueOf((char) c))
+            .collect(Collectors.joining())
+    ));
+System.out.println(anagrams);
+// Output: {eilnst=[listen, silent, enlist], eggloo=[google], below=[elbow, below]}
