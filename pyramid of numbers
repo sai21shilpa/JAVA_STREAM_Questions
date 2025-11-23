@@ -1,0 +1,11 @@
+int levels = 5;
+List<String> pyramid = IntStream.rangeClosed(1, levels)
+    .mapToObj(i -> " ".repeat(levels - i) + IntStream.rangeClosed(1, i).mapToObj(String::valueOf).collect(Collectors.joining(" ")))
+    .collect(Collectors.toList());
+pyramid.forEach(System.out::println);
+// Output:
+//     1
+//    1 2
+//   1 2 3
+//  1 2 3 4
+// 1 2 3 4 5
