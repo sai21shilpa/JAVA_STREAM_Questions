@@ -1,0 +1,21 @@
+public boolean containsDuplicate(int[] nums) {
+    List<Integer> list = Arrays.stream(nums)
+                               .boxed()
+                               .collect(Collectors.toList());
+    Set<Integer> set = new HashSet<>(list);
+     if(set.size() == list.size()) {
+       return false;
+   } 
+      return true;
+
+/* or can also try below way */ 
+    Set<Integer> setData = new HashSet<>();
+        return Arrays.stream(nums)
+                     .anyMatch(num -> !setData.add(num));
+  }
+
+Input: nums = [1,2,3,1]
+Output: true
+
+Input: nums = [1,2,3,4]
+Output: false
