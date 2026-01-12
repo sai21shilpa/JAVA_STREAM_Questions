@@ -1,0 +1,2 @@
+List<Integer> list = Arrays.stream(arr).boxed().distinct()
+.collect(Collectors.toList());
