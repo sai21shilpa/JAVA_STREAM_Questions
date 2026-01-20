@@ -1,0 +1,9 @@
+nterface Parent { 
+public void parentMethod(){ 
+System.out.println("Hello"); 
+} 
+} 
+@FunctionalInterface 
+interface Child extends Parent { 
+public int childMethod(); 
+}
